@@ -4,1062 +4,219 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronit Khanna</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com">
-    <link href=
-"https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
-        rel="stylesheet">
-        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-    <script>
-        const buttons = document.querySelectorAll(".card-buttons button");
-
-const sections = document.querySelectorAll(".card-section");
-
-const card = document.querySelector(".card");
-
-const handleButtonClick = e => {
-
-  const targetSection = e.target.getAttribute("data-section");
-
-  const section = document.querySelector(targetSection);
-
-  targetSection !== "#about" ?
-
-  card.classList.add("is-active") :
-
-  card.classList.remove("is-active");
-
-  card.setAttribute("data-state", targetSection);
-
-  sections.forEach(s => s.classList.remove("is-active"));
-
-  buttons.forEach(b => b.classList.remove("is-active"));
-
-  e.target.classList.add("is-active");
-
-  section.classList.add("is-active");
-
-};
-
-buttons.forEach(btn => {
-
-  btn.addEventListener("click", handleButtonClick);
-
-});
-    </script>
-    <script src="https://kit.fontawesome.com/30bf8f5d28.js" crossorigin="anonymous"></script>
-    <style>
-
-@keyframes move {
-    100% {
-        transform: translate3d(0, 0, 1px) rotate(360deg);
-    }
-}
-
-.background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: #644f8c;
-    overflow: hidden;
-}
-
-.background span {
-    width: 13vmin;
-    height: 13vmin;
-    border-radius: 13vmin;
-    backface-visibility: hidden;
-    position: absolute;
-    animation: move;
-    animation-duration: 45;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-
-.background span:nth-child(0) {
-    color: #E45A84;
-    top: 23%;
-    left: 23%;
-    animation-duration: 23s;
-    animation-delay: -26s;
-    transform-origin: 2vw -21vh;
-    box-shadow: 26vmin 0 4.129209336798567vmin currentColor;
-}
-.background span:nth-child(1) {
-    color: #a979fb;
-    top: 50%;
-    left: 81%;
-    animation-duration: 8s;
-    animation-delay: -49s;
-    transform-origin: 16vw 10vh;
-    box-shadow: -26vmin 0 3.648730290247025vmin currentColor;
-}
-.background span:nth-child(2) {
-    color: #E45A84;
-    top: 80%;
-    left: 43%;
-    animation-duration: 41s;
-    animation-delay: -27s;
-    transform-origin: 6vw -9vh;
-    box-shadow: 26vmin 0 3.947279629862734vmin currentColor;
-}
-.background span:nth-child(3) {
-    color: #FFACAC;
-    top: 19%;
-    left: 71%;
-    animation-duration: 35s;
-    animation-delay: -26s;
-    transform-origin: -5vw -20vh;
-    box-shadow: -26vmin 0 3.288323217576622vmin currentColor;
-}
-.background span:nth-child(4) {
-    color: #E45A84;
-    top: 52%;
-    left: 29%;
-    animation-duration: 42s;
-    animation-delay: -41s;
-    transform-origin: 5vw 3vh;
-    box-shadow: 26vmin 0 3.480122703076912vmin currentColor;
-}
-.background span:nth-child(5) {
-    color: #E45A84;
-    top: 66%;
-    left: 79%;
-    animation-duration: 37s;
-    animation-delay: -4s;
-    transform-origin: 15vw -2vh;
-    box-shadow: 26vmin 0 3.635700207899517vmin currentColor;
-}
-.background span:nth-child(6) {
-    color: #E45A84;
-    top: 15%;
-    left: 63%;
-    animation-duration: 25s;
-    animation-delay: -1s;
-    transform-origin: 4vw -19vh;
-    box-shadow: -26vmin 0 3.584796293328304vmin currentColor;
-}
-.background span:nth-child(7) {
-    color: #FFACAC;
-    top: 48%;
-    left: 37%;
-    animation-duration: 53s;
-    animation-delay: -50s;
-    transform-origin: 12vw 7vh;
-    box-shadow: 26vmin 0 3.9513443334538447vmin currentColor;
-}
-.background span:nth-child(8) {
-    color: #a979fb;
-    top: 21%;
-    left: 96%;
-    animation-duration: 19s;
-    animation-delay: -48s;
-    transform-origin: 10vw -23vh;
-    box-shadow: 26vmin 0 4.2441706980752505vmin currentColor;
-}
-.background span:nth-child(9) {
-    color: #FFACAC;
-    top: 76%;
-    left: 87%;
-    animation-duration: 14s;
-    animation-delay: -17s;
-    transform-origin: -21vw 19vh;
-    box-shadow: 26vmin 0 3.673809245537306vmin currentColor;
-    
-}
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
-
-* {
-
-  box-sizing: border-box;
-
-}
-
-body {
-
-  color: #2b2c48;
-
-  font-family: "Jost", sans-serif;
-
-  background-image: url(https://cdn.staticaly.com/gh/Seo90/underman/df866c97/virm.webp);
-
-  background-repeat: no-repeat;
-
-  background-size: cover;
-
-  background-position: center;
-
-  background-attachment: fixed;
-
-  min-height: 100vh;
-
-  display: -webkit-box;
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  padding: 20px;
-
-}
-
-.card {
-
-  max-width: 500px;
-  max-height: 500px;
-
-  margin: auto;
-  margin-left: 500px;
-
-  overflow-y: auto;
-
-  position: relative;
-
-  z-index: 1;
-
-  overflow-x: hidden;
-
-  background-color: white;
-
-  display: -webkit-box;
-
-  display: flex;
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-  -webkit-box-orient: vertical;
-
-  -webkit-box-direction: normal;
-
-          flex-direction: column;
-
-  border-radius: 10px;
-
-  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
-  margin-top: 100px;
-
-}
-
-.card[data-state="#about"] {
-
-  height: 450px;
-
-}
-
-.card[data-state="#about"] .card-main {
-
-  padding-top: 0;
-
-}
-
-.card[data-state="#contact"] {
-
-  height: 430px;
-
-}
-
-.card[data-state="#experience"] {
-
-  height: 550px;
-
-}
-
-.card.is-active .card-header {
-
-  height: 80px;
-
-}
-
-.card.is-active .card-cover {
-
-  height: 100px;
-
-  top: -50px;
-
-}
-
-.card.is-active .card-avatar {
-
-  -webkit-transform: none;
-
-          transform: none;
-
-  left: 20px;
-
-  width: 50px;
-
-  height: 50px;
-
-  bottom: 10px;
-
-}
-
-.card.is-active .card-fullname,
-
-.card.is-active .card-jobtitle {
-
-  left: 86px;
-
-  -webkit-transform: none;
-
-          transform: none;
-
-}
-
-.card.is-active .card-fullname {
-
-  bottom: 18px;
-
-  font-size: 19px;
-
-}
-
-.card.is-active .card-jobtitle {
-
-  bottom: 16px;
-
-  letter-spacing: 1px;
-
-  font-size: 10px;
-
-}
-
-.card-header {
-
-  position: relative;
-
-  display: -webkit-box;
-
-  display: flex;
-
-  height: 200px;
-
-  flex-shrink: 0;
-
-  width: 100%;
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-}
-
-.card-header * {
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-}
-
-.card-cover {
-
-  width: 100%;
-
-  height: 100%;
-
-  position: absolute;
-
-  height: 160px;
-
-  top: -20%;
-
-  left: 0;
-
-  will-change: top;
-
-  background-size: cover;
-
-  background-position: center;
-
-  -webkit-filter: blur(30px);
-
-          filter: blur(30px);
-
-  -webkit-transform: scale(1.2);
-
-          transform: scale(1.2);
-
-  -webkit-transition: 0.5s;
-
-  transition: 0.5s;
-
-}
-
-.card-avatar {
-
-  width: 100px;
-
-  height: 100px;
-
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-
-  border-radius: 50%;
-
-  -o-object-position: center;
-
-     object-position: center;
-
-  -o-object-fit: cover;
-
-     object-fit: cover;
-
-  position: absolute;
-
-  bottom: 0;
-
-  left: 50%;
-
-  -webkit-transform: translateX(-50%) translateY(-64px);
-
-          transform: translateX(-50%) translateY(-64px);
-
-}
-
-.card-fullname {
-
-  position: absolute;
-
-  bottom: 0;
-
-  font-size: 22px;
-
-  font-weight: 700;
-
-  text-align: center;
-
-  white-space: nowrap;
-
-  -webkit-transform: translateY(-10px) translateX(-50%);
-
-          transform: translateY(-10px) translateX(-50%);
-
-  left: 50%;
-
-}
-
-.card-jobtitle {
-
-  position: absolute;
-
-  bottom: 0;
-
-  font-size: 10px;
-
-  white-space: nowrap;
-
-  font-weight: 500;
-
-  opacity: 0.7;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1.5px;
-
-  margin: 0;
-
-  left: 50%;
-
-  -webkit-transform: translateX(-50%) translateY(-1px);
-
-          transform: translateX(-50%) translateY(-1px);
-
-}
-
-.card-main {
-
-  position: relative;
-
-  -webkit-box-flex: 1;
-
-          flex: 1;
-
-  display: -webkit-box;
-
-  display: flex;
-
-  padding-top: 10px;
-
-  -webkit-box-orient: vertical;
-
-  -webkit-box-direction: normal;
-
-          flex-direction: column;
-
-}
-
-.card-subtitle {
-
-  font-weight: 700;
-
-  font-size: 13px;
-
-  margin-bottom: 8px;
-
-}
-
-.card-content {
-
-  padding: 20px;
-
-}
-
-.card-desc {
-
-  line-height: 1.6;
-
-  color: #636b6f;
-
-  font-size: 14px;
-
-  margin: 0;
-
-  font-weight: 400;
-
-  font-family: "DM Sans", sans-serif;
-
-}
-
-.card-social {
-
-  display: -webkit-box;
-
-  display: flex;
-
-  -webkit-box-align: center;
-
-          align-items: center;
-
-  padding: 0 20px;
-  margin-left: 160px;
-  margin-top:90px;
-
-  
-
-}
-
-
-.card-social svg {
-
-  fill: #a5b5ce;
-
-  width: 16px;
-
-  display: block;
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-}
-
-.card-social a {
-
-  color: #8797a1;
-
-  height: 32px;
-
-  width: 32px;
-
-  border-radius: 50%;
-
-  display: -webkit-inline-box;
-
-  display: inline-flex;
-
-  -webkit-box-align: center;
-
-          align-items: center;
-
-  -webkit-box-pack: center;
-
-          justify-content: center;
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-  background-color: rgba(93, 133, 193, 0.05);
-
-  border-radius: 50%;
-
-  margin-right: 10px;
-
-}
-
-.card-social a:hover svg {
-
-  fill: #637faa;
-
-}
-
-.card-social a:last-child {
-
-  margin-right: 0;
-
-}
-
-.card-buttons {
-
-  display: -webkit-box;
-
-  display: flex;
-
-  background-color: #fff;
-
-  margin-top: auto;
-
-  position: -webkit-sticky;
-
-  position: sticky;
-
-  bottom: 0;
-
-  left: 0;
-
-}
-
-.card-buttons button {
-
-  -webkit-box-flex: 1;
-
-          flex: 1 1 auto;
-
-  -webkit-user-select: none;
-
-     -moz-user-select: none;
-
-      -ms-user-select: none;
-
-          user-select: none;
-
-  background: 0;
-
-  font-size: 13px;
-
-  border: 0;
-
-  padding: 15px 5px;
-
-  cursor: pointer;
-
-  color: #5c5c6d;
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-  font-family: "Jost", sans-serif;
-
-  font-weight: 500;
-
-  outline: 0;
-
-  border-bottom: 3px solid transparent;
-
-}
-
-.card-buttons button.is-active, .card-buttons button:hover {
-
-  color: #2b2c48;
-
-  border-bottom: 3px solid #09f;
-
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(127, 199, 231, 0)), color-stop(44%, rgba(207, 204, 255, 0.2)), to(rgba(211, 226, 255, 0.4)));
-
-  background: linear-gradient(to bottom, rgba(127, 199, 231, 0) 0%, rgba(207, 204, 255, 0.2) 44%, rgba(211, 226, 255, 0.4) 100%);
-
-}
-
-.card-section {
-
-  display: none;
-
-}
-
-.card-section.is-active {
-
-  display: block;
-
-  -webkit-animation: fadeIn 0.6s both;
-
-          animation: fadeIn 0.6s both;
-
-}
-
-@-webkit-keyframes fadeIn {
-
-  0% {
-
-    opacity: 0;
-
-    -webkit-transform: translatey(40px);
-
-            transform: translatey(40px);
-
-  }
-
-  100% {
-
-    opacity: 1;
-
-  }
-
-}
-
-@keyframes fadeIn {
-
-  0% {
-
-    opacity: 0;
-
-    -webkit-transform: translatey(40px);
-
-            transform: translatey(40px);
-
-  }
-
-  100% {
-
-    opacity: 1;
-
-  }
-
-}
-
-.card-timeline {
-
-  margin-top: 30px;
-
-  position: relative;
-
-}
-
-.card-timeline:after {
-
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(134, 214, 243, 0)), to(#516acc));
-
-  background: linear-gradient(to top, rgba(134, 214, 243, 0) 0%, #516acc 100%);
-
-  content: "";
-
-  left: 42px;
-
-  width: 2px;
-
-  top: 0;
-
-  height: 100%;
-
-  position: absolute;
-
-  content: "";
-
-}
-
-.card-item {
-
-  position: relative;
-
-  padding-left: 60px;
-
-  padding-right: 20px;
-
-  padding-bottom: 30px;
-
-  z-index: 1;
-
-}
-
-.card-item:last-child {
-
-  padding-bottom: 5px;
-
-}
-
-.card-item:after {
-
-  content: attr(data-year);
-
-  width: 10px;
-
-  position: absolute;
-
-  top: 0;
-
-  left: 37px;
-
-  width: 8px;
-
-  height: 8px;
-
-  line-height: 0.6;
-
-  border: 2px solid #fff;
-
-  font-size: 11px;
-
-  text-indent: -35px;
-
-  border-radius: 50%;
-
-  color: rgba(134, 134, 134, 0.7);
-
-  background: -webkit-gradient(linear, left top, left bottom, from(#a0aee3), to(#516acc));
-
-  background: linear-gradient(to bottom, #a0aee3 0%, #516acc 100%);
-
-}
-
-.card-item-title {
-
-  font-weight: 500;
-
-  font-size: 14px;
-
-  margin-bottom: 5px;
-
-}
-
-.card-item-desc {
-
-  font-size: 13px;
-
-  color: #6f6f7b;
-
-  line-height: 1.5;
-
-  font-family: "DM Sans", sans-serif;
-
-}
-
-.card-contact-wrapper {
-
-  margin-top: 20px;
-
-}
-
-.card-contact {
-
-  display: -webkit-box;
-
-  display: flex;
-
-  -webkit-box-align: center;
-
-          align-items: center;
-
-  font-size: 13px;
-
-  color: #6f6f7b;
-
-  font-family: "DM Sans", sans-serif;
-
-  line-height: 1.6;
-
-  cursor: pointer;
-
-}
-
-.card-contact + .card-contact {
-
-  margin-top: 16px;
-
-}
-#dsc {
-    margin-right: 9px;
-}
-#dsc:hover{
-    fill: #637faa;
-}
-.card-contact svg {
-
-  flex-shrink: 0;
-
-  width: 30px;
-
-  min-height: 34px;
-
-  margin-right: 12px;
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-  padding-right: 12px;
-
-  border-right: 1px solid #dfe2ec;
-
-}
-
-.contact-me {
-
-  border: 0;
-
-  outline: none;
-
-  background: linear-gradient(to right,#735ce7,#acc3ff);
-
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
-
-  color: #fff;
-
-  padding: 12px 16px;
-
-  width: 100%;
-
-  border-radius: 5px;
-
-  margin-top: 25px;
-
-  cursor: pointer;
-
-  font-size: 14px;
-
-  font-weight: 500;
-
-  font-family: "Jost", sans-serif;
-
-  -webkit-transition: 0.3s;
-
-  transition: 0.3s;
-
-}
-
-#nav{
-  position: absolute;
-  z-index: 1;
-  background-color: transparent;
-  max-width:900px;
-  max-height: 70px;
-  margin-top: 600px;
-  margin-left:425px;
-  padding-right: 200px;
-  padding-left:150px;
-
-}
-
-
-#cont{
-background-color: white;
-box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
-border-radius: 10px;
-}
-
-.divider{
-    width:100px;
-    display:inline-block;
-}
-
-
-
-   </style>
-
-
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c620f9d030.js" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
-<body>
-  <header id = "nav" class="text-gray-600 body-font">
-    <div id = "cont" class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-
-      </nav>
-      <a href = "https://github.com/techsparkz"><button  class="inline-flex  bg-gray-100 border-0 py-2 px-5 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Projects
-      </button></a>
-      <div class =  "divider"></div>
-      <a href = "from.html"><button  class="inline-flex  bg-gray-100 border-0 py-2 px-5 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Contact
-      </button></a>
-   
-
-    </div>
-  </header>
-    
-
-    <div class="card" data-state="#about">
-
-        <div class="card-header">
-      
-          <div class="card-cover" style="background-image: url('https://2.bp.blogspot.com/-b_lqelKRB4k/Xj-rBvoSxUI/AAAAAAAACHg/G19lzRiO6qYQmquCqut44r1cMdF53HQ0QCLcBGAsYHQ/s1600/anime3.png')"></div>
-      
-          <img class="card-avatar" src="https://2.bp.blogspot.com/-b_lqelKRB4k/Xj-rBvoSxUI/AAAAAAAACHg/G19lzRiO6qYQmquCqut44r1cMdF53HQ0QCLcBGAsYHQ/s1600/anime3.png" alt="avatar" />
-      
-          <h1 class="card-fullname">Ronit Khanna</h1>
-      
-          <h2 class="card-jobtitle">Web Developer / Python Programmer</h2>
-      
+<style>
+    header{
+        background-color: #527BB7;
+    }
+    h2{
+        color:#527BB7;
+    }
+    #types{
+      text-align: left;
+      padding-left: 200px;
+      padding-bottom: 20px;
+    }
+    #causes{
+      text-align: left;
+      padding-left: 1px;
+      padding-bottom: 20px;
+    }
+</style>
+<body class="text-gray-400 bg-gray-900 body-font">
+    <header class="text-gray-400 bg--900 body-font drop-shadow-2xl">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <i class="fa-solid fa-user-shield fa-lg"></i>
+            <span class="ml-3 text-xl">SpyWare</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-white">First Link</a>
+            <a class="mr-5 hover:text-white">Second Link</a>
+            <a class="mr-5 hover:text-white">Third Link</a>
+            <a class="mr-5 hover:text-white">Fourth Link</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
         </div>
-      
-        <div class="card-main">
-      
-          <div class="card-section is-active" id="about">
-      
-            <div class="card-content">
-      
-              <div class="card-subtitle">ABOUT</div>
-      
-              <p class="card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
-      
-              </p>
-      
-            </div>
-      
-            <div class="card-social">
-      
-              <a href="https://github.com/techsparkz"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                  </svg></a>
+      </header>
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-5">
+            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">SPYWARE</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-600">What is Spyware ? </h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Spyware is software with malicious behaviour that aims to gather information about a person or organization and send it to another entity in a way that harms the user—for example, by violating their privacy or endangering their device's security. This behaviour may be present in malware as well as in legitimate software. Websites may engage in spyware behaviours like web tracking
+              .</p>
+          </div>
 
+          <!-- <section class="text-gray-600 body-font">
+            <div class="container px-5  mx-auto">
+              <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-600">History of Spyware - </h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">The first recorded use of the term spyware occurred on October 16, 1995 in a Usenet post that poked fun at Microsoft's business model.[3] Spyware at first denoted software meant for espionage purposes. However, in early 2000 the founder of Zone Labs, Gregor Freund, used the term in a press release for the ZoneAlarm Personal Firewall.[4] Later in 2000, a parent using ZoneAlarm was alerted to the fact that Reader Rabbit, educational software marketed to children by the Mattel toy company, was surreptitiously sending data back to Mattel.[5] Since then, "spyware" has taken on its present sense.
+
+                  According to a 2005 study by AOL and the National Cyber-Security Alliance, 61 percent of surveyed users' computers were infected with form of spyware. 92 percent of surveyed users with spyware reported that they did not know of its presence, and 91 percent reported that they had not given permission for the installation of the spyware.[6] As of 2006, spyware has become one of the preeminent security threats to computer systems running Microsoft Windows operating systems. Computers on which Internet Explorer (IE) is the primary browser are particularly vulnerable to such attacks, not only because IE was the most widely used,[7] but because its tight integration with Windows allows spyware access to crucial parts of the operating system.
+                  
+                  .</p>
+              </div> -->
+              <section class="text-gray-600 body-font">
+                <div class="container ">
+                  
+                    <h1 class="sm:text-2xl text-xl font-medium title-font mb-2 text-gray-600" id = "types">Types Of Spywares:-</h1>
+                  
+                  <section class="text-gray-600 body-font">
+                    <div class="container">
+                      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                        
+                      
+                        <div class="flex-grow sm:text-left ">
+                          
+                          <h2 class="text-gray-600 text-lg title-font font-bold mb-1 tracking-widest font-mono">Key loggers or system monitors - 
+                          </h2>
+                          
+                          <p class="leading-relaxed text-base text-s tracking-tight font-serif">A keylogger is a type of spyware that is difficult to detect. You type critical information into your keyboard, confident that no one is looking, while actually, keylogging software works to record everything you enter. 
+
+                            They are software programs that track your activity and enable hackers to gain access to your private information. By monitoring your keystrokes, it may track passcodes and credit card data you input and the websites you visit. The software is setup on your device, capturing every keystroke. The record is then sent to a server, where fraudsters await the opportunity to exploit this sensitive data.
+                            .</p>
+                          
+                        </div>
+                      </div>
+                      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                          <h2 class="text-gray-600 text-lg title-font font-bold mb-1 tracking-widest font-mono">Trojans - 
+                          </h2>
+                          
+                          <p class="leading-relaxed text-base text-s tracking-tight font-serif">A Trojan horse, often known as a Trojan, is malicious malware or software that appears legal yet can take control of your device. A Trojan is a computer program designed to hurt, disrupt, steal, or otherwise harm your information or network. To deceive you, a Trojan masquerades as a legitimate application or document. It tries to trick you into downloading and running spyware on your computer. Once deployed, a Trojan can carry out the function for which it was created.
+
+
+
+                            .</p>
       
-              <a href="mailto:sparkztech001@gmail.com"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
-                  </svg>
-                </a>
+                        </div>
+                      </div>
+                      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                          <h2 class="text-gray-600 text-lg title-font font-bold mb-1 tracking-widest font-mono">Adware - 
+                          </h2>
+                          
+                          <p class="leading-relaxed text-base text-s tracking-tight font-serif">Its name is derived from a combination of the phrases software and advertising. At its core, adware is any software that shows advertising on a computer, whether malicious or not. For instance, legitimate apps may use adware to make their services available for free. However, certain spyware can also act as adware – these are harmful software programs that display deceptive adverts, numerous blinking pop-up windows, big banners, and full-screen auto-play advertisements in the browser. 
+
+
+                            .</p>
       
-              <a href="https://discord.com/user/735516869133336617"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        </div>
+                      </div>
+                      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                          <h2 class="text-gray-600 text-lg title-font font-bold mb-1 tracking-widest font-mono">Browser hijackers - 
+                          
+                          </h2>
+                          
+                          <p class="leading-relaxed text-base text-s tracking-tight font-serif">Browser hijackers, also known as simply hijackers, are a form of spyware designed to change Internet browser parameters without the user’s consent or agreement. Hijackers frequently alter the default search engine and homepage. Others, however, are known to inject adverts. They are classified as adware — automatically diverting users to potentially harmful locations when they visit particular websites and occasionally causing significant system alterations. 
+
+
+
+                            .</p>
       
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-                    <path d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"/>
-                    <path d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z"/>
-                  </svg></a>
-      
-            </div>
-      
-          </div>
-      
-                </div>
-      
-              </div>
-      
-            </div>
-      
-          </div>
-      
-          </div>
-      
-      
+                        </div>
+                        
+                      </div>
+                      
+                      </div>
+                      <!-- <button class="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
+                    </div>
+                  </section>
+                  <h1 class="sm:text-xl text-xl font-medium title-font mb-2 text-gray-600" id = "causes">Causes Of Spywares:-</h1>
+                  <section class="text-gray-600 body-font">
+                    <div class="container px-5  mx-auto flex flex-wrap">
+                      <div class="flex flex-wrap w-full">
+                        <div class="lg">
+                          <div class="flex relative pb-12">
+                            <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                            </div>
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                              </svg>
+                            </div>
+                            <div class="flex-grow pl-4">
+                              <!-- <h2 class="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">1</h2> -->
+                              <p class="leading-relaxed">Accepting a prompt or pop-up without reading it first.</p>
+                            </div>
+                          </div>
+                          <div class="flex relative pb-12">
+                            <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                            </div>
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                              </svg>
+                            </div>
+                            <div class="flex-grow pl-4">
+                              <!-- <h2 class="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">2</h2> -->
+                              <p class="leading-relaxed">Downloading software from an unreliable source.
+                                .</p>
+                            </div>
+                          </div>
+                          <div class="flex relative pb-12">
+                            <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                            </div>
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <circle cx="12" cy="5" r="3"></circle>
+                                <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                              </svg>
+                            </div>
+                            <div class="flex-grow pl-4">
+                              <!-- <h2 class="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">3</h2> -->
+                              <p class="leading-relaxed">Opening email attachments from unknown senders.
+                                .</p>
+                            </div>
+                          </div>
+                          <div class="flex relative pb-12">
+                            <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                            </div>
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                              </svg>
+                            </div>
+                            <div class="flex-grow pl-4">
+                              <!-- <h2 class="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">4</h2> -->
+                              <p class="leading-relaxed">Pirating media such as movies, music, or games.
+                                .</p>
+                            </div>
+                          </div>
+                          <div class="flex relative">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                <path d="M22 4L12 14.01l-3-3"></path>
+                              </svg>
+                            </div>
+                            <div class="flex-grow pl-4">
+                              <!-- <h2 class="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">5</h2> -->
+                              <p class="leading-relaxed">Clicking a link to a malware-laden website.
+                                .</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+          <!-- <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
         </div>
-      
-      </div>
-
-    <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-     </div>
+      </section>
 </body>
 </html>
