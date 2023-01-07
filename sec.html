@@ -25,6 +25,127 @@
       padding-left: 1px;
       padding-bottom: 20px;
     }
+
+      .container{
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.blog-post{
+	background: #fff;
+	margin: 0 auto 2em auto;
+	padding: 35px 30px;
+	box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.3);
+}
+
+.side-post{
+	background: #fff;
+	margin: 0 auto 1.5em auto;
+	width: 15em;
+	padding: 20px;
+}
+
+.blog-content{
+	font-size: 1em;
+	border-left: 5px solid #8EE5EE;
+	padding-left: 15px;
+}
+
+.side-content{
+	font-size: .9em;
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+.blog-title{
+	font-size: 2.5em;
+	margin-top: 5px;
+}
+
+.date{
+	font-size: 1em;
+	font-weight: 400;
+	color: #9C9C9C;
+	margin-top: -10px;
+	text-decoration: underline;
+	text-decoration-color: currentColor;
+}
+
+.post-link{
+	color: #009ACD;
+	font-style: italic;
+	transition: all 0.4s;
+}
+
+.post-link:hover{
+	color: #005c7b;
+	text-decoration: underline;
+	text-decoration-color: currentColor;
+	cursor: pointer;
+}
+
+/* Button */
+
+.button{
+	display: block;
+	padding: 15px 20px;
+	margin-top: .8em;
+	background: #009ACD;
+	text-align: center;
+	color: #fff;
+	font-size: 1.4em;
+	border-radius: 3px;
+	transition: all .4s ease-in;
+}
+
+.button:hover{
+	background: #005c7b;
+}
+
+/*Media Queries*/
+
+/* @900px*/
+@media only screen and (max-width: 56.25em) {
+	.col{ margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3{ width: 100%; }
+	.side-post{ width: 42%;
+			   float: left;
+			   margin: -2% 0 1% 1.6%;}
+}
+
+/* @685px*/
+@media only screen and (max-width: 42.813em) {
+	.side-post{ width: auto;
+				padding: 15px;
+			    margin: -2% auto 8% auto; }
+	.blog-title{ font-size: 1.95em; }
+	.date{ font-size: .9em; }		
+}
+
+/* @480px */
+@media only screen and (max-width: 30em){
+	nav ul{ max-height: 0; }
+	.reveal{ max-height:19em; }
+	nav ul .nav-item{ -webkit-box-sizing: border-box;
+		 			  -moz-box-sizing: border-box;
+     				  -ms-box-sizing: border-box;
+        			  box-sizing: border-box;
+					  width:100%;
+		 			  padding: 15px; }
+	
+	.menu-bar{ display: block; }
+
+}
+
+/* @380px*/
+@media only screen and (max-width: 23.75em) {
+	.blog-content, .post-link{ font-size: .9em; }
+	.side-content{ font-size: .8em; }
+	.button{ padding: 10px 15px; }
+	.nav-item{ font-size: 1.2em; }
+}
+    
 </style>
 <body class="text-gray-400 bg-gray-900 body-font">
     <header class="text-gray-400 bg--900 body-font drop-shadow-2xl">
@@ -72,7 +193,8 @@
               <div class="flex flex-col text-center py-17 w-full mb-5">
                 
                 <h1 class="sm:text-3xl text-2xl font-medium title-font  mb-4 text-gray-600">"Effective Strategies for Protecting Against Spyware"</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base "><ul class = "list-decimal list-inside">
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-auto">
+                  <ul class = "list-decimal list-inside">
                   <li>Install and regularly update antivirus and antispyware software: This is one of the most effective ways to protect against spyware and other types of malware. Make sure to choose a reputable security solution and keep it up to date to ensure the best protection.</li>
                   <li>Be cautious when downloading and installing software: Only download and install software from trusted sources, and be sure to carefully read and understand the terms of service and any end user license agreements before proceeding.</li>
                   <li>Use a firewall: A firewall can help protect against unauthorized access to your device, including attempts to install spyware.</li>
@@ -85,3 +207,21 @@
                 
                   .</p>
               </div>
+              <div class="container">
+                <div class="section">
+                    <div class="col span_2_of_3">
+                  <div class="blog-post">
+                  <h1 class="blog-title">Shakespeare: Irrelevant or not?</h1>
+                  <p class="blog-content">¬Have you ever had someone like your father come up to you and make a dad joke? E.g. If Shakespeare cooked breakfast, he’d make a ham-let. From this you’ll know that stereotypically, they’re so boring. Just like Shakespeare in today’s society, his plays might appeal to others of an older generation but not to someone studying him in a schooling set up in the 21st century. 
+          Shakespeare was a writer who revolutionised the way we watch, and script plays but are from the 15th century and are irrelevant to most people today simple because they are old, boring and outdated.
+          Firstly, all of his plays were written in the late 1500’s and early 1600’s, so the language, relativeness and interest are out.
+          The language that Shakespeare used or ‘old English’ is very common throughout his plays and could have definitely been fun and interesting 400 years ago, but not so much in today’s society. There is no real reason people should learn this made up language that could now be considered gibberish or sound uneducated. If it was still used now, it would be boring and disinteresting. If the language in those texts were updated from their old format, the plays would certainly be more enjoyable and understandable for all people and i’m not the only one who thinks so, students online have created their own blog pages and curated why they would prefer different material for the same reasons.
+          Shakespeare’s plays would now be considered irrelevant because simply put people can’t relate to something from 400 years ago. Not only will these stories have happened to teenagers but most of the problems arisen in the plays could easily be solved nowadays with a simple phone call or text message. According to Stephanie Fernandez, Macbeth has no main moral that could still be used today, and I have to agree with her, the scene where Macbeth see’s a dagger is unnecessary and honesty ridiculous.
+          Macbeth’s morals are not only irrelevant but quite peculiar also. Overtime he made heaps of text, but we have never taken the time to truly realise what the full moral of the story is. People have had questions like: Are these morals relevant to teenagers? Are they relevant to today? Are they similar to other famous morals? And the answer is “No! they aren’t.” Debate.org ran a poll about 2 years ago, the results were that 94% of people agreed that Shakespeare should be phased out whereas 6% said that his morals were teachable. 
+          Other than Romeo and Juliet, what play has a clear, relevant and understandable moral? None of them! We can’t learn from them because they are pointless, giving them a bad name. All of them should be tweaked and updated to make them something widely accepted in today’s society, including technology and comedy would be a start.
+          These plays are purely some sort of source for entertainment for people who are willing to waste their time.
+          I have got my point across to you when I say that Shakespeare is irrelevant and shouldn’t be taught unnecessarily anymore to students. Mainly because his plays, poems and stories are irrelevant today, have uncommon language and have some very outdated morals. Making people disinterested and extremely bored, putting them off Shakespeare the next time they need to read it. I recommend that teachers choose a study with a better moral and not a complete waste of time.
+          </p>
+                  <a>Thanks for Reading.</a>
+                        </div>
+                    </div>
