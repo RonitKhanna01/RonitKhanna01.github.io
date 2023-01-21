@@ -11,6 +11,7 @@
 <style>
     header{
         background-color: #5865F2;
+        position: relative;
     }
     /* h2{
         color:#527BB7;
@@ -79,6 +80,14 @@ h2 {
   font-weight: 300;
   animation: lights 5s 750ms linear infinite;
   text-align:center;
+  position: relative;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 </style>
 <body class="text-gray-400 bg-gray-900 body-font">
@@ -101,6 +110,9 @@ h2 {
           </button> -->
         </div>
       </header>
+      <video autoplay muted loop id="myVideo">
+        <source src="gifbg.gif" type="video/mp4">
+      </video>
 <h2>Welcome To SpyAware</h2>
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
