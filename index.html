@@ -89,6 +89,36 @@ h2 {
     min-width: 90%;
     min-height: 90%;
 }
+html,body {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+}
+#videoBG {
+    position:fixed;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+    body {
+        background: url('poster.jpg');
+        background-size: cover;
+    }
+}
 </style>
 <body class="text-gray-400 body-font">
     <header class="text-gray-400 bg--900 body-font drop-shadow-2xl">
@@ -110,7 +140,7 @@ h2 {
           </button> -->
         </div>
       </header>
-      <video autoplay muted loop id="myVideo">
+      <video autoplay muted loop id="videoBG ">
         <source src="bgvid.mp4" type="video/mp4">
       </video>
 <h2>Welcome To SpyAware</h2>
