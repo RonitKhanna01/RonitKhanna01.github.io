@@ -83,7 +83,7 @@ h2 {
   position: relative;
 }
 #myVideo {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     min-width: 90%;
@@ -93,9 +93,8 @@ html,body {
     width:100vw;
     height: 100vh;
     margin: 0;
-    position: relative;
 }
-/* #videoBG {
+#videoBG {
     position:fixed;
     z-index: -1;
 }
@@ -119,9 +118,9 @@ html,body {
         background: url('poster.jpg');
         background-size: cover;
     }
-} */
+}
 </style>
-<body class="text-gray-400 body-font">
+<body class="text-gray-400 bg-900 body-font">
     <header class="text-gray-400 bg--900 body-font drop-shadow-2xl">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
@@ -141,9 +140,7 @@ html,body {
           </button> -->
         </div>
       </header>
-      <video autoplay muted loop id="myVideo">
-        <source src="bgvid.mp4" type="video/mp4">
-      </video>
+
 <h2>Welcome To SpyAware</h2>
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
